@@ -19,7 +19,11 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
-  pool: 5
-  timeout: 5000
+  adapter: postgresql
+  encoding: utf8
+  database: rails_test_scale_app
+  username: test_scale_app_user
+  password: pwd
+  host: 172.31.7.138
+  port: 5432
+  pool: 10
